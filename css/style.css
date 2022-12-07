@@ -1,0 +1,252 @@
+*
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6,span,ul,ol{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --primaryFont: 'Josefin Sans', sans-serif;
+    --secondaryFont:  'Roboto', sans-serif;
+    --primaryColor: #FF6F61;
+    --secondaryColor: #11161E;
+}
+body{
+    font-family: var(--primaryFont) ;
+}
+
+.button{
+    width: 200px;
+    height: 70px;
+    background-color: var(--primaryColor);
+    color: white;
+    padding: 19px 37px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    overflow: hidden;
+    text-align: center;
+   
+
+}
+/*NAVBAR STARTS HERE*/
+#myCustomNav ul li a
+{
+font-size: 16px;
+font-weight: 400;
+color: var(--secondaryColor);
+padding: 42px 22px;
+}
+#myCustomNav ul li a:hover{
+    color: var(--primaryColor);
+}
+nav .iconPanal ul li{
+    display: inline-block;
+}
+nav .iconPanal ul li span,
+nav .iconPanal ul li a
+{
+    font-size: 16px;
+    padding: 0 13px;
+    color: var(--secondaryColor);
+    position: relative;
+
+}
+nav .iconPanal ul li a .overlay 
+{
+    position: absolute;
+    width: 15px; 
+    height: 15px; 
+    border-radius: 50%;
+    background-color: var(--primaryColor);
+    display: block;
+    color: white;
+    font-size: 14px;
+    padding: 0;
+    text-align: center;
+    line-height: 15px;
+    top: 0;
+    right: 6px;
+}
+
+nav .togglerButton{
+font-size: 20px;
+border: none;
+outline:none;
+background: transparent;
+padding: 0 15px;
+}
+nav #smallMenu .offCanvasLogo{
+    height: 40px;
+}
+
+nav #smallMenu .small_menu li a
+{
+font-size: 18px;
+color: var(--secondaryColor);
+border-bottom: 1px solid #ccc;
+display: block;
+padding: 10px 20px;
+}
+/*BANNER STARTS HERE*/
+#banner{
+    position: relative;
+}
+#banner .banner_slider{
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+}
+#banner .banner_slider .row{
+    height: 800px;
+}
+#banner .banner_cnt{
+    width: 45%;
+}
+#banner .banner_slider .banner_cnt h3
+{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #1D1D1D;
+}
+#banner .banner_slider .banner_cnt h1
+{
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 74px;
+    color: #1D1D1D;
+    transition-delay: 0.4s;
+}
+#banner .banner_slider .banner_cnt p
+{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #1D1D1D;
+    margin: 15px 0;
+    transition-delay: 0.8s;
+}
+#banner .banner_slider .banner_cnt a{
+    transition-delay: 1s;
+}
+#banner .banner_slider .banner_cnt .button:hover 
+{
+    color: black;
+    border-radius: 30px;
+    background-color: aquamarine;
+   
+}  
+#banner .banner_slider .banner_cnt .button:hover span
+{
+    
+    margin-left: 170px;
+    
+} 
+#banner .banner_slider .banner_cnt > * {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s ease;
+}
+#banner .banner_slider.slick-active .banner_cnt > * {
+    transform: translateY(0);
+    opacity: 1;
+
+} 
+#banner .slick-dots
+{
+    position: absolute;
+    bottom: 15%;
+    left: 100px;
+}
+#banner .slick-dots li{
+    display: inline-block;
+    margin: 0 5px;
+}
+#banner .slick-dots button{
+    width: 25px;
+    height: 12px;
+    border: none;
+    color: transparent;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+
+#banner .slick-dots .slick-active button{
+width: 40px;
+background-color: var(--primaryColor);
+}
+/*BANNER ENDS HERE*/
+
+#categories{
+    padding: 50px 0;
+}
+#categories .category_cart img{
+    width: 100%;
+    display: block;
+}
+#categories .category_cart:nth-child(1){
+    margin-bottom: 15px;
+    position: relative;
+}
+
+#categories .category_cart .overlay
+{
+  position: absolute;
+  inset: 20px;
+  padding: 20px 30px;
+  background-color: #11161e3e;;
+  
+  
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.3s;
+  
+
+
+/*width: 496px;
+height: 260px;
+left: 320px;
+top: 1020px;*/
+
+}
+#categories .category_cart .overlay h1{
+    font-family: var(--primaryFont);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 70px;
+}
+#categories .category_cart .overlay a{
+        font-family: 'Josefin Sans';
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+        color: #FFFFFF;
+        margin-left: 160px;
+
+}    
+#categories .category_cart:hover .overlay
+{
+    opacity: 1;
+  transform: scale(1);
+}
+.overlay .row
+{
+height: 100%;
+}
